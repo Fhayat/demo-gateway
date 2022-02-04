@@ -8,9 +8,9 @@ services:
     hostname: localhost
     image: caapim/gateway:latest
     ports:
-    - "18080:8080"
-    - "18443:8443"
-    - "18000:8000"
+    - "5221:8080"
+    - "5222:8443"
+    - "5223:80"
     volumes:
     - /opt/SecureSpan/Gateway/node/default/etc/bootstrap/services/restman
     - ./bundles/helloworld.bundle:/opt/SecureSpan/Gateway/node/default/etc/bootstrap/bundle/helloworld.bundle
@@ -25,4 +25,4 @@ services:
 
 secrets:
   license:
-    file: ./docker/license.xml
+    file: /mnt/c/Users/famaj/Documents/GitHub/demo-gateway/docker/license.xml
